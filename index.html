@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		h1 {
+			color: red;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Обновить страницу Ctrl + R</h1>
+
+
+	<script>
+		// Лесенка
+		let levels = 9; // Высота лесенки
+		let count = 1;  // Текущий уровень
+
+		while (count <= levels) { //Пока текущий уровень меньше заданой высоты
+			let symbol = ""; //Создаем пустую строку для символом нашей лесенки
+			let j = 1; //Переменная для необходимого количества символов на каждом уровне
+			while (j <= count) {
+				symbol += "|_"; //На каждом шаге добавляем еще один символ к строке
+				j++;
+			}
+			// Выводим лесенку на текущем уровне
+			console.log(symbol);
+			count++;
+		}
+
+		// Шахматная доска
+		let chessBoard = "";
+		let whiteCell = "\u2B1C";
+		let blackCell = "\u2B1B";
+
+for (let i = 0; i < 8; i++) { //Для столбцов
+  for (let j = 0; j < 8; j++) { //Для строк
+    if ((i + j) % 2 === 0) { /*Четность*/
+      chessBoard += whiteCell; //если четный, то белая ячейка
+    } else {
+      chessBoard += blackCell; //если нечетныйы, то черная ячейка
+    }
+  }
+  chessBoard += "\n"; //Переход на следующую строку
+}
+
+console.log(chessBoard);
+
+	</script>
+</body>
+
+</html>
